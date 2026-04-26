@@ -54,7 +54,7 @@ public class CuentaBancaria {
     }
 
     
-    public void setHistorialTransacciones(List<String> historialTransacciones) {
+    public void agregarTransaccionAlHistorial(String log) {
         if (this.historialTransacciones.size() >= 10) {
 
             this.historialTransacciones.remove(0);   // elimina la mas antigua
@@ -62,6 +62,4 @@ public class CuentaBancaria {
         }  
         this.historialTransacciones.add(log);
     }
-
-    
 }

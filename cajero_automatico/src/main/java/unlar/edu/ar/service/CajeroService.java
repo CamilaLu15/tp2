@@ -51,7 +51,7 @@ public class CajeroService {
 
         Transaccion transaccion = new Transaccion(TipoTransaccion.EXTRACCION, monto, "Extracción por cajero.");
         String log = LoggerUtil.formatearLog(transaccion.getTipo().name(), monto.doubleValue(), cuenta.getSaldo().doubleValue());
-        cuenta.agregarTrasaccionAlHistorial(log);
+        cuenta.agregarTransaccionAlHistorial(log);
     }
 
 
