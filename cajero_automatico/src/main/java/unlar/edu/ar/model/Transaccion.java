@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Transaccion {
-    private TipoTransaccion tipo; 
-    private BigDecimal monto; 
-    private LocalDateTime fechaHora; 
-    private String descripcion;
+    private final TipoTransaccion tipo; 
+    private final BigDecimal monto; 
+    private final LocalDateTime fechaHora; 
+    private final String descripcion;
 
     public Transaccion(TipoTransaccion tipo, BigDecimal monto, String descripcion) {
         this.tipo = tipo;
