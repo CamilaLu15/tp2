@@ -9,8 +9,12 @@ import java.math.BigDecimal;
 
 public class CajeroUI {
 
-    private final CajeroService servicio = new CajeroService();
+    private final CajeroService servicio;
     private final Scanner sc = new Scanner(System.in);
+
+    public CajeroUI(CajeroService servicio){
+        this.servicio = servicio;
+    }
 
     public void iniciarMenu(CuentaBancaria cuentaActual, CuentaBancaria cuentaDestino) {
         int opcion = 0;

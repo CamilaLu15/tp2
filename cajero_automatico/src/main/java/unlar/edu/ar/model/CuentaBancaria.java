@@ -12,17 +12,24 @@ public class CuentaBancaria {
     private boolean activa;
     private List<String> historialTransacciones;
 
-    public CuentaBancaria(String numeroCuenta, BigDecimal saldoInicial, String titular, boolean activa,
-            List<String> historialTransacciones) {
+    public CuentaBancaria(String numeroCuenta, String titular, BigDecimal saldoInicial) {
         this.numeroCuenta = numeroCuenta;
-        this.saldo = saldoInicial;
         this.titular = titular;
+        this.saldo = saldoInicial;
         this.activa = true;
         this.historialTransacciones = new ArrayList<>();
     }
 
     public String getNumeroCuenta() {
         return numeroCuenta;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
     }
 
     public BigDecimal getSaldo() {
@@ -33,13 +40,6 @@ public class CuentaBancaria {
         this.saldo = saldo;
     }
 
-    public String getTitular() {
-        return titular;
-    }
-
-    public void setTitular(String titular) {
-        this.titular = titular;
-    }
 
     public boolean isActiva() {
         return activa;
